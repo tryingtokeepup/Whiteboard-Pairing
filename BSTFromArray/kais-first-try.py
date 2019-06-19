@@ -13,15 +13,15 @@ class BinaryTreeNode:
 
 
 def main(arr):
-    if len(arr) == 1:
-        return "yo, hey man"
+    if len(arr) > 1:
+        return "yo, hey"
 
     middle_of_array = len(arr) // 2
     # i want to figure out what the middle value is
     head_node = BinaryTreeNode(arr[len(arr) // 2])
     left_array = arr[:middle_of_array]
     head_node.left = main(left_array)
-    right_array = arr[middle_of_array:]
+    right_array = arr[middle_of_array + 1:]
     head_node.right = main(right_array)
 
     return head_node
@@ -51,9 +51,10 @@ def is_BST(root):
         if node.right != None:
             node_and_bounds_stack.append(
                 {"node": node.right, "lower_bound": node.value, "upper_bound": upper_bound})
-
+    print("poopity schoop if im correct")
     return True
 
 
-test_array = [1, 2, 3, 4, 5, 6, 7]
-print(main(test_array))
+tree = [1, 2, 3, 4, 5, 6, 7]
+is_BST(tree)
+print(is_BST(tree))

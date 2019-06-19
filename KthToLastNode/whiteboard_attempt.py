@@ -1,20 +1,26 @@
-# This algorithm maintains a k-wide 'window' with two pointers
-# and makes one walk down the linked list. When the pointer in
-# front reaches the end of the list, the second pointer will be
-# at the node we're looking for.
-
-# Another approach could be walking down the list to count the
-# length of the list, subtract k from the total length, and
-# then walking to that node.
-
-# Think about some of the tradeoffs between these two approaches.
-# wee
-
-
 class ListNode:
     def __init__(self, value):
         self.value = value
+
         self.next = None
+
+# code starts here
+
+
+# def kthToLastNodeNotWorking(k, head):
+#     starting_node = head
+#     # i need a trailing node
+#     trail_node = head
+
+#     # i know that if k is less than 1, thats a problem
+#     if k < 1:
+#         return print(f"Yo, check your k value. It's got to be at least 1")
+#     else:
+#         while not starting_node.next = None:
+#             starting_node = starting.node.next
+#             trail_node = trail_node.next
+#             for i in range(k - 1):
+#                 pass
 
 
 def kthToLastNode(k, head):

@@ -40,7 +40,7 @@ console.log(
     'mary',
     'michael',
     'alex',
-    'michael',
+    'michael'
   ])
 ); // should print 'michael'
 
@@ -58,6 +58,34 @@ console.log(
     'johnny',
     'jamie',
     'johnny',
-    'john',
+    'john'
   ])
 ); // should print 'johnny'
+
+// function countVotes(votes){
+//   let table = {};
+
+//   for(stuff in votes){
+//     table[votes[stuff]] = table[votes[stuff]] + 1 || 1;
+//   }
+
+//   let max = 0;
+//   let maxArr = [];
+
+//   for(names in table){
+//     if(table[names] > max){
+//       max = table[names];
+//       maxArr = [names];
+//     }
+//     else if( table[names] == max){
+//       maxArr.push(names);
+//     }
+//   }
+
+//   maxArr.sort((a,b)=> a > b)
+//   return maxArr.pop()
+// }
+
+// const votes = ['veronica', 'mary', 'alex', 'james', 'mary', 'michael', 'alex', 'michael'];
+
+// countVotes(votes);  // should return 'michael'`
